@@ -91,14 +91,6 @@ function renderButtons() {
       // Calling the renderButtons function at least once to display the initial list of cities
       renderButtons();    
     
-    // This .on("click") function will trigger the AJAX Call
-    $("#search-button").on("click", function(event) {
-    
-    // event.preventDefault() can be used to prevent an event's default behavior.
-    // Here, it prevents the submit button from trying to submit a form when clicked
-    
-    event.preventDefault();
-}),
         
     
  // Adding a click event listener to all elements with a class of "movie-btn"
