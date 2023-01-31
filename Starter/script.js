@@ -1,63 +1,53 @@
-var searchButton = $("#search-button")
+//do I need to create an empty array of cities?
+var cities = [ ];
+
+//create a function to display weather info for our chosen city
+    function displayWeatherInfo(event) {}
+
 
 // This is our API key - USE a prompt here for user to input?
 var apiKey = "76dd56a7c869514402bbcfd7dbd7cbb7";
-// var searchKey = " ";
-var city = " ";
-var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "units=metric" + "&appid" + apiKey;
+// var city = $ (this).attr("data-name");
 
-$ (document).ready(function () {
+
+// This .on("click") function will trigger the AJAX Call
 $("#search-button").on("click", function(event) {
-        event.preventDefault();
 
-    console.log(searchButton)
+// event.preventDefault() can be used to prevent an event's default behavior.
+// Here, it prevents the submit button from trying to submit a form when clicked
+
+event.preventDefault();
+
+//Get text from input box
+var city = $("search-input").val();
+
+//Construct our query url
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey;
+
+//create an ajax for search button clicked
+$.ajax({
+    url: "https://api.openweathermap.org/data/2.5/weather?q=London&appid=76dd56a7c869514402bbcfd7dbd7cbb7",
+    method: "GET"
+    }).then(function(response) {  // We store all of the retrieved data inside of an object called "response"
+        $("#today").text(JSON.stringify(response));
+    });
+        
+ // Log the queryURL
+    console.log(queryURL);
         console.log("Working")
-        city = $ ("#search-input").val()
-        // if(city != " ")
-        // $.ajax({
-        //     url: queryURL,
-        //     method: "GET"
-
-        //   })
-        //     // We store all of the retrieved data inside of an object called "response"
-        //     .then(function(response) {
-          
-        //       // Log the queryURL
-        //       console.log(queryURL);
-    }
-    )
+     
+        
 
 // Here we are building the URL we need to query the database
 // var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=76dd56a7c869514402bbcfd7dbd7cbb7"
 
 // var cities;
 
-//create a function to display weather info for our chosen city
-// function displayWeatherInfo(event) {
+
 //     var searchButton= $(event.target);
     
+// var searchButton = $("#search-button")
 
-//     var cityName = searchButton.attr("#search-input");
-
-//   var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=76dd56a7c869514402bbcfd7dbd7cbb7";
-  
-// // Here we run our AJAX call to the OpenWeatherMap API
-// $.ajax({
-//     url: queryURL,
-//     method: "GET"
-//   })
-//     // We store all of the retrieved data inside of an object called "response"
-//     .then(function(response) {
-  
-//       // Log the queryURL
-//       console.log(queryURL);
-  
-//       // Log the resulting object
-//       console.log(response);
-
-//       $("#today").html("<h1>" + response.name + " Weather Details</h1>");
-//     }); 
-// }
 
 // //user types in city
 // //presses search (search button needs to be under the input box and blue)
@@ -68,5 +58,5 @@ $("#search-button").on("click", function(event) {
 // //things to think about
 // //use a prompt to prompt user for api key?
 // //css styling 
-
-});
+},
+)
