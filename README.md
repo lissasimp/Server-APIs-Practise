@@ -1,7 +1,5 @@
 # Server-APIs-Weather-Dashboard
 
-This project is about creating an app that allows users to see the weather forecast for cities of their choosing. **I learnt a lot in this project and I feel like my understanding of HTML, CSS, Github and Github Pages has really improved.** I am becoming quicker at debugging my code and know some of the common errors to check first, such as missing divs. My confidence is improving. Bootstrap has been a really interesting topic to learn about and I am looking forward to using it in future projects. This portfolio highlights my work to date as well as the thought processes behind it. This portfolio will be added to and developed as my own personal knowledge deepens and I have more projects to showcase to potential employers.
-
 Server APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your Challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
 
 
@@ -27,14 +25,14 @@ Server APIs allow developers to access their data and functionality by making re
 
 
 ## Usage
-
-![alt text](./Images/Website%20Screenshot.png)
+- https://lissasimp.github.io/Server-APIs-Weather-Dashboard/
+![alt text](./)
 
 ## Credits
 The following websites were used to support this project:
-- https://bootstrapshuffle.com/classes/sizing/h-100
-- https://getb
-
+- https://www.mulesoft.com/resources/api/what-is-an-api
+- https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/region_role
+- https://m.youtube.com/watch?v=3W7HUnzxQg8
 
 
 ## License
