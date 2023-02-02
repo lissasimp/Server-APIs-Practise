@@ -1,4 +1,4 @@
-//**this is stored button**//
+/**this is stored button**/
 cityButton { 
     display: block;
     align-items: left;
@@ -13,9 +13,17 @@ cityButton {
     width: 15%;
     height: 80%;
   }
-//**this is search button**//
+/**this is search button**/
 
   button
 .form-input weather-search {
     display: block;
+}
+
+.col-lg-9 {
+    border: 10;
+    background-color: aqua;
+    margin-left: 200px;
+    width: 100%;
+    height: 100%;
 }
